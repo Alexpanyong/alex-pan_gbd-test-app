@@ -1,0 +1,42 @@
+$font-family-sans-serif: Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+// A helper function that converts rem to px
+@function pxtorem($px, $rem: 16) {
+  @return ($px / $rem) +0rem;
+}
+
+$font-size-base: pxtorem(16);
+$font-size-large: pxtorem(28);
+$font-size-medium: pxtorem(20);
+$font-size-small: pxtorem(14);
+$font-size-tiny: pxtorem(12);
+
+$font-size-h1: pxtorem(30);
+$font-size-h2: pxtorem(24);
+$font-size-h3: pxtorem(20);
+$font-size-h4: pxtorem(16);
+$font-size-h5: pxtorem(12);
+$font-size-h6: pxtorem(10);
+
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+/*
+* Colors
+*/
+$primary_prussian_blue: #004165;
+$primary_summer_sky: #39bcf3;
+$secondary_bondi_blue: #0089c4;
+$secondary_charlotte: #a3dbe8;
+$color_white: #ffffff;
+$color_black: #000000;
+$color_red: #bb0000;
+$color_error: #ff586b;
+$dark_greys_light: #66666c;
+$dark_greys_dark: #2a2a2a;
+$light_greys_light: #ececec;
+$light_greys_dark: #c3c3c3;

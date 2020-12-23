@@ -1,0 +1,39 @@
+@import "../../style/base/variables.scss";
+@import "../../style/base/mixins.scss";
+
+.button {
+  display: inline-block;
+  margin: pxtorem(0) pxtorem(10);
+  padding: pxtorem(8) pxtorem(24);
+  background-color: $color_white;
+  color: $color_black;
+  font-size: $font-size-small;
+  line-height: 1.2em;
+  @include border-radius(4px);
+
+  &:first-child {
+    margin-left: pxtorem(0);
+  }
+
+  &:last-child {
+    margin-right: pxtorem(0);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.primary {
+    background-color: $color_red;
+    color: $color_white;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .button {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: $font-size-medium;
+  }
+}

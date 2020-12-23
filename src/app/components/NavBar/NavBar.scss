@@ -1,0 +1,170 @@
+@import "../../style/base/variables.scss";
+
+.navBarWrap {
+  background-color: $color_black;
+  padding: pxtorem(10) pxtorem(30) pxtorem(0) pxtorem(30);
+
+  .navBar {
+    .logo {
+      display: inline-block;
+      max-width: unset;
+    }
+
+    .loginBtnGroup {
+      position: absolute;
+      vertical-align: top;
+      top: pxtorem(16);
+      right: pxtorem(30);
+    }
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-items: start;
+    color: $color_white;
+    font-size: $font-size-small;
+    margin-top: pxtorem(10);
+
+    .menuItem {
+      display: inline-block;
+      margin: pxtorem(0) pxtorem(4);
+      padding: pxtorem(4) pxtorem(4);
+      border-bottom: 3px solid $color_black;
+
+      &:hover {
+        cursor: pointer;
+        border-bottom: 3px solid $color_red;
+      }
+
+      &#item1 {
+        grid-column: 3;
+      }
+
+      &#item2 {
+      }
+
+      &#item3 {
+      }
+
+      &#item4 {
+      }
+
+      &#item5 {
+        grid-column: 11;
+      }
+
+      &#item6 {
+      }
+
+      &.highlighted {
+        border-bottom: 3px solid $color_red;
+      }
+    }
+  }
+
+  .menuWrap.mobile {
+    position: absolute;
+    left: pxtorem(0);
+    right: pxtorem(0);
+    padding: pxtorem(30) pxtorem(30) pxtorem(0) pxtorem(30);
+    background-color: $color_black;
+    z-index: 10;
+
+    .loginBtnGroup {
+      position: relative;
+      // text-align: center;
+      top: pxtorem(0);
+      right: pxtorem(0);
+    }
+
+    .menu {
+      grid-template-columns: unset;
+      grid-template-rows: repeat(6, 1fr);
+      justify-items: start;
+      color: $color_white;
+      font-size: $font-size-base;
+      margin-top: pxtorem(20);
+      margin-bottom: pxtorem(20);
+
+      .menuItem {
+        display: block;
+        margin: pxtorem(0);
+        padding: pxtorem(10) pxtorem(0);
+        border-bottom: none;
+
+        &#item1 {
+          grid-column: unset;
+        }
+
+        &#item2 {
+        }
+
+        &#item3 {
+        }
+
+        &#item4 {
+        }
+
+        &#item5 {
+          grid-column: unset;
+        }
+
+        &#item6 {
+        }
+      }
+    }
+  }
+
+  .mobileMenuBtn {
+    position: absolute;
+    vertical-align: top;
+    top: pxtorem(20);
+    right: pxtorem(30);
+    width: pxtorem(30);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 680px) {
+  .navBarWrap {
+    .menuWrap.mobile {
+      left: pxtorem(0);
+      right: pxtorem(0);
+      top: pxtorem(58);
+      bottom: pxtorem(0);
+
+      .loginBtnGroup {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+      }
+
+      .menu {
+        font-size: $font-size-large;
+
+        .menuItem {
+          padding: pxtorem(20) pxtorem(0);
+        }
+      }
+    }
+  }
+}

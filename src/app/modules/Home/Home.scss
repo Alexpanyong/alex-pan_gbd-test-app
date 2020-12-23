@@ -1,0 +1,36 @@
+@import "../../style/base/variables.scss";
+
+.homeWrap {
+  min-height: pxtorem(500);
+  background-color: $dark_greys_dark;
+}
+
+.containWrap {
+  padding: pxtorem(30);
+}
+
+.bookListWrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: pxtorem(20);
+}
+
+@media only screen and (max-width: 1280px) {
+  .bookListWrap {
+    grid-template-columns: repeat(3, 1fr);
+    gap: pxtorem(20);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .containWrap {
+    padding: pxtorem(0);
+  }
+
+  .bookListWrap {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: pxtorem(200);
+    gap: pxtorem(0);
+  }
+}

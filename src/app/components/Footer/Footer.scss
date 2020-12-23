@@ -1,0 +1,47 @@
+@import "../../style/base/variables.scss";
+
+.footerWrap {
+  padding: pxtorem(30) pxtorem(30);
+  min-height: pxtorem(200);
+  background-color: $color_black;
+  color: $color_white;
+  font-size: $font-size-small;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.logo {
+  max-width: pxtorem(100);
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.footerMenu {
+  font-size: $font-size-tiny;
+
+  ul li {
+    margin: pxtorem(8) pxtorem(0);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
